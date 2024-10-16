@@ -32,6 +32,28 @@ import logging
 from streamlit_shadcn_ui import button, card
 from textblob import TextBlob
 import transformers
+from dotenv import load_dotenv
+
+load_dotenv()
+
+def setup_openai_client():
+    # Get API key from environment
+    api_key = os.getenv('OPENAI_API_KEY')
+    
+    if not api_key:
+        raise ValueError(
+            "OpenAI API key not found in .env file. "
+            "Please ensure your .env file contains: OPENAI_API_KEY=your-api-key"
+        )
+    
+    if api_key.startswith(('sk-', 'org-')):  # Basic validation of key format
+        return OpenAI(api_key=api_key)
+    else:
+        raise ValueError(
+            "The API key doesn't appear to be in the correct format. "
+            "OpenAI API keys typically start with 'sk-'"
+        )
+    
 transformers.logging.set_verbosity_error()
 nltk.download('punkt_tab')
 def get_base64_of_bin_file(bin_file):
@@ -1318,7 +1340,7 @@ def calculate_correlations(df, feature, time_series, feature_name_mapping, drop_
     return correlations, correlation_summary
 
 
-client = OpenAI(api_key = os.environ.get('OPENAI_API_KEY'))
+client = setup_openai_client()
 
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
