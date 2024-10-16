@@ -763,7 +763,7 @@ class FeedbackEvaluator:
 
             with open(self.json_file_path, 'w') as f:
                 json.dump(serializable_metrics, f, indent=4)
-                
+
             print(f"Metrics saved successfully to {self.json_file_path}")
             return True
         except Exception as e:
@@ -1318,7 +1318,7 @@ def calculate_correlations(df, feature, time_series, feature_name_mapping, drop_
     return correlations, correlation_summary
 
 
-client = OpenAI(api_key='sk-proj-JHkCAN6vxWdNANAihJoUT3BlbkFJvIy8fbgHysCAmfnA6QVU')
+client = OpenAI(api_key = os.environ.get('OPENAI_API_KEY'))
 
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
