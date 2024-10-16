@@ -748,13 +748,23 @@ class FeedbackEvaluator:
 
     def save_metrics(self) -> bool:
         try:
-            with self._lock:
-                # Ensure the directory exists
-                os.makedirs(os.path.dirname(self.json_file_path), exist_ok=True)
+            def convert_to_serializable(obj):
+                if isinstance(obj, np.float32):
+                    return float(obj)
+                elif isinstance(obj, defaultdict):
+                    return dict(obj)
+                elif isinstance(obj, datetime):
+                    return obj.isoformat()
+                return obj
 
-                with open(self.json_file_path, 'w') as f:
-                    json.dump(self.metrics, f, indent=4)
-                print(f"Metrics saved successfully to {self.json_file_path}")
+            serializable_metrics = json.loads(
+                json.dumps(self.metrics, default=convert_to_serializable)
+            )
+
+            with open(self.json_file_path, 'w') as f:
+                json.dump(serializable_metrics, f, indent=4)
+                
+            print(f"Metrics saved successfully to {self.json_file_path}")
             return True
         except Exception as e:
             logging.error(f"Error saving metrics to {self.json_file_path}: {str(e)}")
