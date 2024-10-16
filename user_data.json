@@ -9447,5 +9447,12 @@
         "timestamp": "2024-10-15T14:31:07.882905"
       }
     ]
+  },
+  {
+    "name": "kisat",
+    "profession": "Student",
+    "timestamp": "2024-10-16T19:18:55.465455",
+    "nda_agreed": true,
+    "chat_history": []
   }
 ]
