@@ -1,15 +1,15 @@
 {
-    "total_responses": 3,
-    "average_rouge": 0.07136784851252209,
-    "average_bert_score": 0.81908118724823,
-    "average_relevance": 0.47529923915863037,
+    "total_responses": 9,
+    "average_rouge": 0.06982198459515015,
+    "average_bert_score": 0.808227002620697,
+    "average_relevance": 0.5248891115188599,
     "human_feedback": {},
     "daily_metrics": {
         "2024-10-16": {
-            "total_responses": 3,
-            "average_rouge": 0.07136784851252209,
-            "average_bert_score": 0.81908118724823,
-            "average_relevance": 0.47529923915863037,
+            "total_responses": 9,
+            "average_rouge": 0.06982198459515015,
+            "average_bert_score": 0.808227002620697,
+            "average_relevance": 0.5248891115188599,
             "human_feedback": {}
         }
     }
