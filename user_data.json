@@ -9454,5 +9454,355 @@
     "timestamp": "2024-10-16T19:18:55.465455",
     "nda_agreed": true,
     "chat_history": []
+  },
+  {
+    "name": "kops",
+    "profession": "Specialist - Agriculture",
+    "timestamp": "2024-10-16T19:34:42.687695",
+    "nda_agreed": true,
+    "chat_history": [
+      {
+        "messages": [
+          {
+            "role": "assistant",
+            "content": "Welcome to our Smart Greenhouse Chatbot! On which date would you like to see your plants' growth?"
+          }
+        ],
+        "timestamp": "2024-10-16T19:35:05.279684"
+      },
+      {
+        "messages": [
+          {
+            "role": "assistant",
+            "content": "Welcome to our Smart Greenhouse Chatbot! On which date would you like to see your plants' growth?"
+          },
+          {
+            "role": "user",
+            "content": "24-08"
+          },
+          {
+            "role": "assistant",
+            "content": "I've set the date to 24 August, 2011. Would you like to see plots of the greenhouse data for this day? (Yes/No)"
+          }
+        ],
+        "timestamp": "2024-10-16T19:36:22.000226"
+      },
+      {
+        "messages": [
+          {
+            "role": "assistant",
+            "content": "Welcome to our Smart Greenhouse Chatbot! On which date would you like to see your plants' growth?"
+          },
+          {
+            "role": "user",
+            "content": "24-08"
+          },
+          {
+            "role": "assistant",
+            "content": "I've set the date to 24 August, 2011. Would you like to see plots of the greenhouse data for this day? (Yes/No)"
+          },
+          {
+            "role": "user",
+            "content": "yes"
+          },
+          {
+            "role": "assistant",
+            "content": "Great! What features would you like to see plots for? You can choose from temperature, humidity, CO2, biomass, heating, cooling, CO2 injection, outdoor temperature, outdoor humidity, radiation, or CO level."
+          }
+        ],
+        "timestamp": "2024-10-16T19:36:28.143247"
+      },
+      {
+        "messages": [
+          {
+            "role": "assistant",
+            "content": "Welcome to our Smart Greenhouse Chatbot! On which date would you like to see your plants' growth?"
+          },
+          {
+            "role": "user",
+            "content": "24-08"
+          },
+          {
+            "role": "assistant",
+            "content": "I've set the date to 24 August, 2011. Would you like to see plots of the greenhouse data for this day? (Yes/No)"
+          },
+          {
+            "role": "user",
+            "content": "yes"
+          },
+          {
+            "role": "assistant",
+            "content": "Great! What features would you like to see plots for? You can choose from temperature, humidity, CO2, biomass, heating, cooling, CO2 injection, outdoor temperature, outdoor humidity, radiation, or CO level."
+          },
+          {
+            "role": "user",
+            "content": "temperature,humidity"
+          },
+          {
+            "role": "assistant",
+            "content": "An unexpected error occurred: \n**********************************************************************\n  Resource \u001b[93mpunkt_tab\u001b[0m not found.\n  Please use the NLTK Downloader to obtain the resource:\n\n  \u001b[31m>>> import nltk\n  >>> nltk.download('punkt_tab')\n  \u001b[0m\n  For more information see: https://www.nltk.org/data.html\n\n  Attempted to load \u001b[93mtokenizers/punkt_tab/english/\u001b[0m\n\n  Searched in:\n    - '/home/vscode/nltk_data'\n    - '/usr/local/nltk_data'\n    - '/usr/local/share/nltk_data'\n    - '/usr/local/lib/nltk_data'\n    - '/usr/share/nltk_data'\n    - '/usr/local/share/nltk_data'\n    - '/usr/lib/nltk_data'\n    - '/usr/local/lib/nltk_data'\n**********************************************************************\n"
+          }
+        ],
+        "timestamp": "2024-10-16T19:36:37.375072"
+      }
+    ]
+  },
+  {
+    "name": "adra",
+    "profession": "Researcher",
+    "timestamp": "2024-10-16T19:43:39.362034",
+    "nda_agreed": true,
+    "chat_history": [
+      {
+        "messages": [
+          {
+            "role": "assistant",
+            "content": "Welcome to our Smart Greenhouse Chatbot! On which date would you like to see your plants' growth?"
+          }
+        ],
+        "timestamp": "2024-10-16T19:43:59.778208"
+      },
+      {
+        "messages": [
+          {
+            "role": "assistant",
+            "content": "Welcome to our Smart Greenhouse Chatbot! On which date would you like to see your plants' growth?"
+          }
+        ],
+        "timestamp": "2024-10-16T19:46:06.206158"
+      },
+      {
+        "messages": [
+          {
+            "role": "assistant",
+            "content": "Welcome to our Smart Greenhouse Chatbot! On which date would you like to see your plants' growth?"
+          },
+          {
+            "role": "user",
+            "content": "24-08"
+          },
+          {
+            "role": "assistant",
+            "content": "I've set the date to 24 August, 2011. Would you like to see plots of the greenhouse data for this day? (Yes/No)"
+          }
+        ],
+        "timestamp": "2024-10-16T19:47:11.518633"
+      },
+      {
+        "messages": [
+          {
+            "role": "assistant",
+            "content": "Welcome to our Smart Greenhouse Chatbot! On which date would you like to see your plants' growth?"
+          },
+          {
+            "role": "user",
+            "content": "24-08"
+          },
+          {
+            "role": "assistant",
+            "content": "I've set the date to 24 August, 2011. Would you like to see plots of the greenhouse data for this day? (Yes/No)"
+          },
+          {
+            "role": "user",
+            "content": "yes"
+          },
+          {
+            "role": "assistant",
+            "content": "Great! What features would you like to see plots for? You can choose from temperature, humidity, CO2, biomass, heating, cooling, CO2 injection, outdoor temperature, outdoor humidity, radiation, or CO level."
+          }
+        ],
+        "timestamp": "2024-10-16T19:47:16.065403"
+      },
+      {
+        "messages": [
+          {
+            "role": "assistant",
+            "content": "Welcome to our Smart Greenhouse Chatbot! On which date would you like to see your plants' growth?"
+          },
+          {
+            "role": "user",
+            "content": "24-08"
+          },
+          {
+            "role": "assistant",
+            "content": "I've set the date to 24 August, 2011. Would you like to see plots of the greenhouse data for this day? (Yes/No)"
+          },
+          {
+            "role": "user",
+            "content": "yes"
+          },
+          {
+            "role": "assistant",
+            "content": "Great! What features would you like to see plots for? You can choose from temperature, humidity, CO2, biomass, heating, cooling, CO2 injection, outdoor temperature, outdoor humidity, radiation, or CO level."
+          },
+          {
+            "role": "user",
+            "content": "temperature,humidity"
+          },
+          {
+            "role": "assistant",
+            "content": "Here are the plots for the requested features: Temp_ref, Abshum_ref. You can now ask questions about the data."
+          },
+          {
+            "role": "assistant",
+            "content": "Here are the plots for the requested features: Temp_ref, Abshum_ref. You can now ask questions about the data."
+          },
+          {
+            "role": "assistant",
+            "content": "What would you like to know about this data? You can ask about any feature or aspect of the greenhouse."
+          }
+        ],
+        "timestamp": "2024-10-16T19:47:26.610588"
+      }
+    ]
+  },
+  {
+    "name": "petui",
+    "profession": "Researcher",
+    "timestamp": "2024-10-16T19:46:34.462866",
+    "nda_agreed": true,
+    "chat_history": [
+      {
+        "messages": [
+          {
+            "role": "assistant",
+            "content": "Welcome to our Smart Greenhouse Chatbot! On which date would you like to see your plants' growth?"
+          }
+        ],
+        "timestamp": "2024-10-16T19:46:53.605338"
+      },
+      {
+        "messages": [
+          {
+            "role": "assistant",
+            "content": "Welcome to our Smart Greenhouse Chatbot! On which date would you like to see your plants' growth?"
+          },
+          {
+            "role": "user",
+            "content": "23-06"
+          },
+          {
+            "role": "assistant",
+            "content": "I've set the date to 23 June, 2011. Would you like to see plots of the greenhouse data for this day? (Yes/No)"
+          }
+        ],
+        "timestamp": "2024-10-16T19:47:44.833232"
+      },
+      {
+        "messages": [
+          {
+            "role": "assistant",
+            "content": "Welcome to our Smart Greenhouse Chatbot! On which date would you like to see your plants' growth?"
+          },
+          {
+            "role": "user",
+            "content": "23-06"
+          },
+          {
+            "role": "assistant",
+            "content": "I've set the date to 23 June, 2011. Would you like to see plots of the greenhouse data for this day? (Yes/No)"
+          },
+          {
+            "role": "user",
+            "content": "yes"
+          },
+          {
+            "role": "assistant",
+            "content": "Great! What features would you like to see plots for? You can choose from temperature, humidity, CO2, biomass, heating, cooling, CO2 injection, outdoor temperature, outdoor humidity, radiation, or CO level."
+          }
+        ],
+        "timestamp": "2024-10-16T19:47:49.237808"
+      },
+      {
+        "messages": [
+          {
+            "role": "assistant",
+            "content": "Welcome to our Smart Greenhouse Chatbot! On which date would you like to see your plants' growth?"
+          },
+          {
+            "role": "user",
+            "content": "23-06"
+          },
+          {
+            "role": "assistant",
+            "content": "I've set the date to 23 June, 2011. Would you like to see plots of the greenhouse data for this day? (Yes/No)"
+          },
+          {
+            "role": "user",
+            "content": "yes"
+          },
+          {
+            "role": "assistant",
+            "content": "Great! What features would you like to see plots for? You can choose from temperature, humidity, CO2, biomass, heating, cooling, CO2 injection, outdoor temperature, outdoor humidity, radiation, or CO level."
+          },
+          {
+            "role": "user",
+            "content": "temperature"
+          },
+          {
+            "role": "assistant",
+            "content": "Here are the plots for the requested features: Temp_ref. You can now ask questions about the data."
+          },
+          {
+            "role": "assistant",
+            "content": "Here are the plots for the requested features: Temp_ref. You can now ask questions about the data."
+          },
+          {
+            "role": "assistant",
+            "content": "What would you like to know about this data? You can ask about any feature or aspect of the greenhouse."
+          }
+        ],
+        "timestamp": "2024-10-16T19:47:54.689142"
+      },
+      {
+        "messages": [
+          {
+            "role": "assistant",
+            "content": "Welcome to our Smart Greenhouse Chatbot! On which date would you like to see your plants' growth?"
+          },
+          {
+            "role": "user",
+            "content": "23-06"
+          },
+          {
+            "role": "assistant",
+            "content": "I've set the date to 23 June, 2011. Would you like to see plots of the greenhouse data for this day? (Yes/No)"
+          },
+          {
+            "role": "user",
+            "content": "yes"
+          },
+          {
+            "role": "assistant",
+            "content": "Great! What features would you like to see plots for? You can choose from temperature, humidity, CO2, biomass, heating, cooling, CO2 injection, outdoor temperature, outdoor humidity, radiation, or CO level."
+          },
+          {
+            "role": "user",
+            "content": "temperature"
+          },
+          {
+            "role": "assistant",
+            "content": "Here are the plots for the requested features: Temp_ref. You can now ask questions about the data."
+          },
+          {
+            "role": "assistant",
+            "content": "Here are the plots for the requested features: Temp_ref. You can now ask questions about the data."
+          },
+          {
+            "role": "assistant",
+            "content": "What would you like to know about this data? You can ask about any feature or aspect of the greenhouse."
+          },
+          {
+            "role": "user",
+            "content": "trends for temperature?"
+          },
+          {
+            "role": "assistant",
+            "content": "An unexpected error occurred: Object of type float32 is not JSON serializable"
+          }
+        ],
+        "timestamp": "2024-10-16T19:48:41.819283"
+      }
+    ]
   }
 ]

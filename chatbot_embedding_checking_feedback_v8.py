@@ -3,6 +3,7 @@ import traceback
 import json
 import threading
 import re
+import nltk
 import spacy
 import streamlit as st
 import pandas as pd
@@ -32,7 +33,7 @@ from streamlit_shadcn_ui import button, card
 from textblob import TextBlob
 import transformers
 transformers.logging.set_verbosity_error()
-
+nltk.download('punkt_tab')
 def get_base64_of_bin_file(bin_file):
     with open(bin_file, 'rb') as f:
         data = f.read()
@@ -914,8 +915,21 @@ class LLMResponseEvaluator:
         return (current_avg * (n - 1) + new_value) / n
 
     def save_metrics(self):
+        def convert_to_serializable(obj):
+            if isinstance(obj, np.float32):
+                return float(obj)
+            elif isinstance(obj, defaultdict):
+                return dict(obj)
+            elif isinstance(obj, datetime):
+                return obj.isoformat()
+            return obj
+
+        serializable_metrics = json.loads(
+            json.dumps(self.metrics, default=convert_to_serializable)
+        )
+
         with open(self.json_file_path, 'w') as f:
-            json.dump(self.metrics, f, indent=4)
+            json.dump(serializable_metrics, f, indent=4)
 
     def get_metrics_summary(self):
         return {
