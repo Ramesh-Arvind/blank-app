@@ -1,0 +1,72 @@
+{
+    "total_responses": 242,
+    "average_bleu": 0.0,
+    "average_rouge": 0.07756931796226957,
+    "average_bert_score": 0.801143965198974,
+    "average_relevance": 0.4595411604862999,
+    "human_feedback": {},
+    "daily_metrics": {
+        "2024-10-02": {
+            "total_responses": 27,
+            "average_bleu": 0.0,
+            "average_rouge": 0.09447705653355648,
+            "average_bert_score": 0.8045469169263486,
+            "average_relevance": 0.449324032774678,
+            "human_feedback": {}
+        },
+        "2024-10-03": {
+            "total_responses": 33,
+            "average_bleu": 0.0,
+            "average_rouge": 0.05684254956579645,
+            "average_bert_score": 0.7959945454741969,
+            "average_relevance": 0.4677600291642276,
+            "human_feedback": {}
+        },
+        "2024-10-04": {
+            "total_responses": 24,
+            "average_bleu": 0.0,
+            "average_rouge": 0.07808252036247884,
+            "average_bert_score": 0.8038785631457964,
+            "average_relevance": 0.5277878753840923,
+            "human_feedback": {}
+        },
+        "2024-10-07": {
+            "total_responses": 42,
+            "average_bleu": 0.0,
+            "average_rouge": 0.0910244164943499,
+            "average_bert_score": 0.8097104543731326,
+            "average_relevance": 0.4657400832289741,
+            "human_feedback": {}
+        },
+        "2024-10-10": {
+            "total_responses": 27,
+            "average_bleu": 0.0,
+            "average_rouge": 0.0936292756244055,
+            "average_bert_score": 0.810674786567688,
+            "average_relevance": 0.43593245023792543,
+            "human_feedback": {}
+        },
+        "2024-10-11": {
+            "total_responses": 30,
+            "average_bleu": 0.0,
+            "average_rouge": 0.05938455765793596,
+            "average_bert_score": 0.7948539515336355,
+            "average_relevance": 0.4123349584639072,
+            "human_feedback": {}
+        },
+        "2024-10-14": {
+            "total_responses": 26,
+            "average_rouge": 0.07457098977635722,
+            "average_bert_score": 0.7933638737751887,
+            "average_relevance": 0.43351881206035614,
+            "human_feedback": {}
+        },
+        "2024-10-15": {
+            "total_responses": 33,
+            "average_rouge": 0.07271852719840613,
+            "average_bert_score": 0.7946675672675624,
+            "average_relevance": 0.484891650351611,
+            "human_feedback": {}
+        }
+    }
+}
