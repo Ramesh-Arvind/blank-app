@@ -2285,17 +2285,13 @@ def process_user_input(user_input, df, term_to_feature, feature_name_mapping):
 def monitor_page():
     apply_custom_css()
     st.markdown("<h1 style='text-align: center;'>🌿 Smart Greenhouse Chatbot 🌱</h1>", unsafe_allow_html=True)
-
-    if 'messages' not in st.session_state:
-        st.session_state.messages = []
-
     # Initialize session states
     if 'user_info' not in st.session_state:
         welcome_form()
         return
 
     initialize_session_state()
-    print(f"Debug: Messages in session state: {st.session_state.messages}")
+
     # Define feature mapping
     term_to_feature = {
         'temperature': ['Temp_ref'],
@@ -2343,7 +2339,6 @@ def monitor_page():
     # Chat interface
     st.write("### Greenhouse Data Analysis Chat")
     for i, message in enumerate(st.session_state.messages):
-            print(f"Debug: Processing message {i}: {message}")
             with st.chat_message(message["role"], avatar=message.get("avatar")):
                 st.markdown(message["content"])
                 # Display plots if available
