@@ -2295,7 +2295,7 @@ def monitor_page():
         return
 
     initialize_session_state()
-
+    print(f"Debug: Messages in session state: {st.session_state.messages}")
     # Define feature mapping
     term_to_feature = {
         'temperature': ['Temp_ref'],
@@ -2343,7 +2343,7 @@ def monitor_page():
     # Chat interface
     st.write("### Greenhouse Data Analysis Chat")
     for i, message in enumerate(st.session_state.messages):
-        if message and "role" in message:  # Ensure the message is not None and has the "role" key
+            print(f"Debug: Processing message {i}: {message}")
             with st.chat_message(message["role"], avatar=message.get("avatar")):
                 st.markdown(message["content"])
                 # Display plots if available
