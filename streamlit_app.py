@@ -35,6 +35,7 @@ import transformers
 from dotenv import load_dotenv
 
 load_dotenv()
+st.set_page_config(page_title="Smart Greenhouse Monitor", layout="wide", initial_sidebar_state="collapsed")
 
 def setup_openai_client():
     # Get API key from environment
@@ -2346,8 +2347,7 @@ def monitor_page():
 
 # Main function
 def main():
-    st.set_page_config(page_title="Smart Greenhouse Monitor", layout="wide", initial_sidebar_state="collapsed")
-
+    
     if 'page' not in st.session_state:
         st.session_state.page = "project_explanation"
 
