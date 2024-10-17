@@ -670,6 +670,17 @@ def apply_custom_css():
         """
     )
 
+def install_spacy_model():
+    try:
+        # Try loading the model to check if it's already installed
+        nlp = spacy.load("en-core-web-sm")
+    except OSError:
+        # If the model is not found, install it
+        st.write("Model 'en-core-web-sm' not found. Downloading...")
+        subprocess.check_call([sys.executable, "-m", "spacy", "download", "en-core-web-sm"])
+        nlp = spacy.load("en-core-web-sm")
+    return nlp
+    
 class FeedbackSystem:
     def __init__(self, num_chunks):
         self.chunk_weights = np.ones(num_chunks)
