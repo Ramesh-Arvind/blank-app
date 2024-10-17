@@ -48,8 +48,8 @@ def get_base64_of_bin_file(bin_file):
         data = f.read()
     return base64.b64encode(data).decode()
 # Image paths
-image_path = "Ramesh-Arvind/blank-app/venlo.webp"
-gif_path = "Ramesh-Arvind/blank-app/basil.gif"
+image_path = "venlo.webp"
+gif_path = "basil.gif"
 
 def project_explanation_page():
     # Custom CSS for styling
@@ -97,8 +97,8 @@ def project_explanation_page():
     </div>
     """.format(
         get_base64_of_bin_file("TUC_LogoText_TUC.svg"),
-        get_base64_of_bin_file("Ramesh-Arvind/blank-app/basil.gif"),
-        get_base64_of_bin_file("Ramesh-Arvind/blank-app/ACSD_Logo_TUC.svg")
+        get_base64_of_bin_file("basil.gif"),
+        get_base64_of_bin_file("ACSD_Logo_TUC.svg")
     ), unsafe_allow_html=True)
 
     st.markdown('<h1 class="title">Welcome to Greenhouse Chatbot / Willkommen beim Gewächshaus-Chatbot</h1>', unsafe_allow_html=True)
@@ -160,8 +160,8 @@ def project_explanation_page():
 
 
 def welcome_page():
-    gif_path = Path("Ramesh-Arvind/blank-app/basil.gif")
-    image_path = Path("Ramesh-Arvind/blank-app/venlo.webp")
+    gif_path = Path("basil.gif")
+    image_path = Path("venlo.webp")
     # CSS for styling
     st.markdown("""
     <style>
@@ -307,7 +307,7 @@ def welcome_form():
     <div class="gif-container">
         <img src="data:image/gif;base64,{}" style="width: 300px; height: 300px; border-radius: 10px;">
     </div>
-    """.format(get_base64_of_bin_file("Ramesh-Arvind/blank-app/basil.gif")), unsafe_allow_html=True)
+    """.format(get_base64_of_bin_file("basil.gif")), unsafe_allow_html=True)
     # Title
     st.markdown('<h1 class="title">Welcome to the Smart Greenhouse Chatbot</h1>', unsafe_allow_html=True)
     # Form
@@ -404,9 +404,9 @@ def nda_page():
         <img src="data:image/svg+xml;base64,{}" class="logo">
     </div>
     """.format(
-        get_base64_of_bin_file("Ramesh-Arvind/blank-app/TUC_LogoText_TUC.svg"),
-        get_base64_of_bin_file("Ramesh-Arvind/blank-app/basil.gif"),
-        get_base64_of_bin_file("Ramesh-Arvind/blank-app/ACSD_Logo_TUC.svg")
+        get_base64_of_bin_file("TUC_LogoText_TUC.svg"),
+        get_base64_of_bin_file("basil.gif"),
+        get_base64_of_bin_file("ACSD_Logo_TUC.svg")
     ), unsafe_allow_html=True)
 
     st.markdown('<h1 class="title">Non-Disclosure Agreement / Vertraulichkeitsvereinbarung</h1>', unsafe_allow_html=True)
@@ -541,7 +541,7 @@ def save_user_data(user_info=None, nda_agreed=None, chat_messages=None):
         })
 
     # Save updated data
-    with open("Ramesh-Arvind/blank-app/user_data.json", "w") as f:
+    with open("user_data.json", "w") as f:
         json.dump(data, f, indent=2)
 
     return user_entry
@@ -549,9 +549,9 @@ def save_user_data(user_info=None, nda_agreed=None, chat_messages=None):
 
 def apply_custom_css():
     # Get base64 encoded images for the chatbot icons and send button
-    leaves_gif = get_base64_of_bin_file('Ramesh-Arvind/blank-app/leaves.gif')
-    sprout_gif = get_base64_of_bin_file('Ramesh-Arvind/blank-app/sprout.gif')
-    leaff_gif = get_base64_of_bin_file('Ramesh-Arvind/blank-app/leaff.gif')
+    leaves_gif = get_base64_of_bin_file('leaves.gif')
+    sprout_gif = get_base64_of_bin_file('sprout.gif')
+    leaff_gif = get_base64_of_bin_file('leaff.gif')
 
     custom_css = f"""
     <style>
@@ -697,7 +697,7 @@ class FeedbackSystem:
         }
 
 class FeedbackEvaluator:
-    def __init__(self, json_file_path: str = 'Ramesh-Arvind/blank-app/feedback_metrics.json'):
+    def __init__(self, json_file_path: str = 'feedback_metrics.json'):
         self.json_file_path = os.path.abspath(json_file_path)
         self.nlp = spacy.load("en_core_web_sm")
         self._lock = threading.Lock()
@@ -834,7 +834,7 @@ class FeedbackEvaluator:
 
 
 class LLMResponseEvaluator:
-    def __init__(self, json_file_path='Ramesh-Arvind/blank-app/llm_metrics.json'):
+    def __init__(self, json_file_path='llm_metrics.json'):
         self.json_file_path = json_file_path
         self.load_metrics()
         self.rouge = Rouge()
@@ -1853,7 +1853,7 @@ def handle_feedback_change(feedback_key):
             st.session_state[feedback_key] = feedback
             # Initialize feedback evaluator if not exists
             if 'feedback_evaluator' not in st.session_state:
-                st.session_state.feedback_evaluator = FeedbackEvaluator('Ramesh-Arvind/blank-app/feedback_metrics.json')
+                st.session_state.feedback_evaluator = FeedbackEvaluator('feedback_metrics.json')
 
             # Add feedback
             success = st.session_state.feedback_evaluator.add_feedback(
@@ -1879,7 +1879,7 @@ def handle_feedback_change(feedback_key):
 
 
 def load_data():
-    df = pd.read_csv('Ramesh-Arvind/blank-app/HC_ref_163_2510.csv')
+    df = pd.read_csv('HC_ref_163_2510.csv')
     df.columns = df.columns.str.strip().str.replace('"', '')
 
     # Convert Date column to datetime
@@ -1903,7 +1903,7 @@ def initialize_session_state():
     defaults = {
         'chunks': [],
         'selected_features': [],
-        'messages': [{"role": "assistant", "content": "Welcome to our Smart Greenhouse Chatbot! On which date would you like to see your plants' growth?","avatar": "Ramesh-Arvind/blank-app/sprout.gif"}],
+        'messages': [{"role": "assistant", "content": "Welcome to our Smart Greenhouse Chatbot! On which date would you like to see your plants' growth?","avatar": "sprout.gif"}],
         'current_stage': 'welcome',
         'analysis_complete': False,
         'chunk_embeddings': [],
@@ -1937,7 +1937,7 @@ def initialize_session_state():
         st.session_state.messages = []
         st.session_state.messages.append({
             "role": "assistant",
-            "content": "Welcome to our Smart Greenhouse Chatbot! On which date would you like to see your plants' growth?","avatar": "Ramesh-Arvind/blank-app/sprout.gif"
+            "content": "Welcome to our Smart Greenhouse Chatbot! On which date would you like to see your plants' growth?","avatar": "sprout.gif"
         })
     if 'current_stage' not in st.session_state:
         st.session_state.current_stage = 'welcome'
@@ -1963,7 +1963,7 @@ def initialize_session_state():
             st.session_state.feedback_system.chunk_weights):
         st.session_state.feedback_system = FeedbackSystem(len(st.session_state.chunks))
     if 'feedback_evaluator' not in st.session_state:
-        st.session_state.feedback_evaluator = FeedbackEvaluator('Ramesh-Arvind/blank-app/feedback_metrics.json')
+        st.session_state.feedback_evaluator = FeedbackEvaluator('feedback_metrics.json')
     if 'displayed_plots' not in st.session_state:
         st.session_state.displayed_plots = {}
     if 'detailed_explanations' not in st.session_state:
@@ -2160,7 +2160,7 @@ def process_user_input(user_input, df, term_to_feature, feature_name_mapping):
                 assistant_message = {
                     "role": "assistant",
                     "content": response,
-                    "avatar": "Ramesh-Arvind/blank-app/sprout.gif"
+                    "avatar": "sprout.gif"
                 }
                 st.session_state.messages.append(assistant_message)
                 for plot_info in plots:
@@ -2172,7 +2172,7 @@ def process_user_input(user_input, df, term_to_feature, feature_name_mapping):
                 plot_message = {
                     "role": "assistant",
                     "content": response,
-                    "avatar": "Ramesh-Arvind/blank-app/sprout.gif",
+                    "avatar": "sprout.gif",
                     "show_feedback": True,
                     "has_plots": True
                 }
@@ -2182,7 +2182,7 @@ def process_user_input(user_input, df, term_to_feature, feature_name_mapping):
                 follow_up_message = {
                     "role": "assistant",
                     "content": "What would you like to know about this data? You can ask about any feature or aspect of the greenhouse.",
-                    "avatar": "Ramesh-Arvind/blank-app/sprout.gif",
+                    "avatar": "sprout.gif",
                     "show_feedback": False
                 }
                 st.session_state.messages.append(follow_up_message)
@@ -2255,7 +2255,7 @@ def process_user_input(user_input, df, term_to_feature, feature_name_mapping):
         st.session_state.messages.append({
             "role": "assistant",
             "content": response,
-            "avatar": "Ramesh-Arvind/blank-app/sprout.gif",
+            "avatar": "sprout.gif",
             "show_feedback": show_feedback
         })
         display_feedback(len(st.session_state.messages) - 1)
@@ -2294,7 +2294,7 @@ def monitor_page():
         'carbon monoxide': ['co_level']
     }
 
-    df = pd.read_csv('Ramesh-Arvind/blank-app/HC_ref_163_2510.csv')
+    df = pd.read_csv('HC_ref_163_2510.csv')
     df.columns = df.columns.str.strip().str.replace('"', '')
     df['Date'] = pd.to_datetime(df['Date'], format='%d-%m-%Y', dayfirst=True)
 
@@ -2333,13 +2333,13 @@ def monitor_page():
                 display_feedback(i)
 
     if user_input := st.chat_input("How can I help you with the greenhouse data, give feedback for each response?"):
-        user_avatar = "Ramesh-Arvind/blank-app/leaves.gif"
+        user_avatar = "leaves.gif"
         st.session_state.messages.append({"role": "user", "content": user_input, "avatar": user_avatar})
 
         with st.chat_message("user", avatar=user_avatar):
             st.markdown(user_input)
 
-        with st.chat_message("assistant", avatar="Ramesh-Arvind/blank-app/sprout.gif"):
+        with st.chat_message("assistant", avatar="sprout.gif"):
             process_user_input(user_input, df, term_to_feature, feature_name_mapping)
 
     save_user_data(user_info=st.session_state.user_info, chat_messages=st.session_state.messages)
