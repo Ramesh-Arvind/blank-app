@@ -15,7 +15,7 @@ transformers
 rouge-score
 bert-score
 streamlit-shadcn-ui
-rougue
+Rougue
 load_dotenv
 openAI
 os
