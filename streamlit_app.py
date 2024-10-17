@@ -38,6 +38,7 @@ load_dotenv()
 
 def setup_openai_client():
     # Get API key from environment
+    os.environ["openai_secret_key"] == st.secrets["openai_secret_key"]
     api_key = os.getenv('OPENAI_API_KEY')
     
     if not api_key:
