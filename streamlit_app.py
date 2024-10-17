@@ -39,7 +39,16 @@ load_dotenv()
 
 def setup_openai_client():
     # Get API key from environment
-    os.environ["openai_secret_key"] == st.secrets["openai_secret_key"]
+    os.environ["openai_secret_key"] = st.secrets["openai_secret_key"]
+
+    # Ensure the API key is set correctly
+    if "openai_secret_key" not in os.environ:
+        st.error("OpenAI API key is not set. Please check your secrets configuration.")
+    else:
+        import openai
+        openai.api_key = os.environ["openai_secret_key"]
+        return openai
+
     
 transformers.logging.set_verbosity_error()
 nltk.download('punkt_tab')
