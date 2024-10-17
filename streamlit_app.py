@@ -39,21 +39,6 @@ load_dotenv()
 def setup_openai_client():
     # Get API key from environment
     os.environ["openai_secret_key"] == st.secrets["openai_secret_key"]
-    api_key = os.getenv('OPENAI_API_KEY')
-    
-    if not api_key:
-        raise ValueError(
-            "OpenAI API key not found in .env file. "
-            "Please ensure your .env file contains: OPENAI_API_KEY=your-api-key"
-        )
-    
-    if api_key.startswith(('sk-', 'org-')):  # Basic validation of key format
-        return OpenAI(api_key=api_key)
-    else:
-        raise ValueError(
-            "The API key doesn't appear to be in the correct format. "
-            "OpenAI API keys typically start with 'sk-'"
-        )
     
 transformers.logging.set_verbosity_error()
 nltk.download('punkt_tab')
