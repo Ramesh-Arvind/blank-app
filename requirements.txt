@@ -16,7 +16,6 @@ rouge-score
 bert-score
 streamlit-shadcn-ui
 rouge
-load_dotenv
 openAI
 os
 datetime
