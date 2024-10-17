@@ -33,9 +33,9 @@ from streamlit_shadcn_ui import button, card
 from textblob import TextBlob
 import transformers
 from dotenv import load_dotenv
+st.set_page_config(page_title="Smart Greenhouse Monitor", layout="wide", initial_sidebar_state="collapsed")
 
 load_dotenv()
-st.set_page_config(page_title="Smart Greenhouse Monitor", layout="wide", initial_sidebar_state="collapsed")
 
 def setup_openai_client():
     # Get API key from environment
