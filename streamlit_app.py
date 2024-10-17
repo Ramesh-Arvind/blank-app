@@ -96,7 +96,7 @@ def project_explanation_page():
         <img src="data:image/svg+xml;base64,{}" class="logo">
     </div>
     """.format(
-        get_base64_of_bin_file("Ramesh-Arvind//blank-app//TUC_LogoText_TUC.svg"),
+        get_base64_of_bin_file("TUC_LogoText_TUC.svg"),
         get_base64_of_bin_file("Ramesh-Arvind/blank-app/basil.gif"),
         get_base64_of_bin_file("Ramesh-Arvind/blank-app/ACSD_Logo_TUC.svg")
     ), unsafe_allow_html=True)
