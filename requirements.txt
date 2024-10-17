@@ -18,4 +18,3 @@ streamlit-shadcn-ui
 rouge
 openAI
 datetime
-collections
