@@ -17,6 +17,5 @@ bert-score
 streamlit-shadcn-ui
 rouge
 openAI
-os
 datetime
 collections
