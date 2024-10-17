@@ -2277,6 +2277,9 @@ def monitor_page():
     apply_custom_css()
     st.markdown("<h1 style='text-align: center;'>🌿 Smart Greenhouse Chatbot 🌱</h1>", unsafe_allow_html=True)
 
+    if 'messages' not in st.session_state:
+        st.session_state.messages = []
+
     # Initialize session states
     if 'user_info' not in st.session_state:
         welcome_form()
@@ -2331,17 +2334,20 @@ def monitor_page():
     # Chat interface
     st.write("### Greenhouse Data Analysis Chat")
     for i, message in enumerate(st.session_state.messages):
-        with st.chat_message(message["role"], avatar=message.get("avatar")):
-            st.markdown(message["content"])
-            if message.get("has_plots", False) and hasattr(st.session_state, 'current_plots'):
-                for plot_info in st.session_state.current_plots:
-                    try:
-                        st.plotly_chart(plot_info["plot"], use_container_width=True)
-                    except Exception as e:
-                        print(f"Error plotting {plot_info['feature']}: {str(e)}")
+        if message and "role" in message:  # Ensure the message is not None and has the "role" key
+            with st.chat_message(message["role"], avatar=message.get("avatar")):
+                st.markdown(message["content"])
+                # Display plots if available
+                if message.get("has_plots", False) and hasattr(st.session_state, 'current_plots'):
+                    for plot_info in st.session_state.current_plots:
+                        try:
+                            st.plotly_chart(plot_info["plot"], use_container_width=True)
+                        except Exception as e:
+                            print(f"Error plotting {plot_info['feature']}: {str(e)}")
 
-            if message["role"] == "assistant" and message.get("show_feedback", False):
-                display_feedback(i)
+                # Show feedback option if applicable
+                if message["role"] == "assistant" and message.get("show_feedback", False):
+                    display_feedback(i)
 
     if user_input := st.chat_input("How can I help you with the greenhouse data, give feedback for each response?"):
         user_avatar = "leaves.gif"
