@@ -680,7 +680,7 @@ def install_spacy_model():
         subprocess.check_call([sys.executable, "-m", "spacy", "download", "en-core-web-sm"])
         nlp = spacy.load("en-core-web-sm")
     return nlp
-    
+
 class FeedbackSystem:
     def __init__(self, num_chunks):
         self.chunk_weights = np.ones(num_chunks)
@@ -710,7 +710,7 @@ class FeedbackSystem:
 class FeedbackEvaluator:
     def __init__(self, json_file_path: str = 'feedback_metrics.json'):
         self.json_file_path = os.path.abspath(json_file_path)
-        self.nlp = spacy.load("en_core_web_sm")
+        self.nlp = install_spacy_model
         self._lock = threading.Lock()
         self.metrics = self.load_metrics()
         self.rouge = Rouge()
