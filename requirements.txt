@@ -1,1 +1,17 @@
+nltk
+spacy
 streamlit
+pandas
+numpy
+sentence-transformers
+scikit-learn
+scipy
+openai
+plotly
+pathlib
+python-dotenv
+textblob
+transformers
+rouge-score
+bert-score
+streamlit-shadcn-ui
