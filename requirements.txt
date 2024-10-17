@@ -15,3 +15,9 @@ transformers
 rouge-score
 bert-score
 streamlit-shadcn-ui
+rougue
+load_dotenv
+openAI
+os
+datetime
+collections
